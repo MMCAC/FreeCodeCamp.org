@@ -1,0 +1,113 @@
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+<!-- Each element is going to have one ID, and in the case of the classes, you can put on a lot of different elements. -->
+
+<!-- There are a few places to write HTML online: codepen.io or replit.com-->
+
+<!-- The name of the file should be index.html because the web browsers will only look for it-->
+
+<!DOCTYPE html> <!--It tells the browser to expect HTML and what version of to use-->
+<html lang = "en">
+    <head>
+        <meta>
+        <title>CatPhotoApp</title>
+        <style> /*Use CSS Selectors to Style Elements*/
+            #heading /*Use an id Attribute to Style an Element*/
+            {
+                color: green;
+            }
+            #cat-photo-form
+            {
+                background-color: green;
+            }
+            .silver-backgorund
+            {
+                background-color: silver; /*Give a Background Color to a div Element*/
+            }
+            
+            .dotted-green-border /*Class to change some border*/
+            {
+                border-color: black;
+                border-width: 5px;
+                border-style: dotted;
+                border-radius: 50%; /*To "Add Rounded Corner with border-radius" you need to put in 'a'px. But if you want to "Make Circular Images with a border-radius", you need to put 50%*/
+            }
+
+            .smaller-image /*Size Your Images*/
+            {
+                width: 100px;
+            }
+            
+            .red-text /*Use a CSS Class to Style an Element. And Style Multiple Elements with a CSS Class*/
+            {
+                color: red; /*Muda a coloração do texto.*/
+            }
+            p
+            {
+                font-size: 16px; /*Change the size of the letters*/
+                font-family: monospace; /*Set the font of the letters*/
+            }
+            h2
+            {
+                font-family: Lobster, monospace;  /*, 'Open Sans';*/ /*In case the first font don't show up. "Specify How Fonts Should Degrade"*/
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1 class="red-text" id="heading">Hello World!</h1><!--In the hierarchy, id stands above the class-->
+        <h2 style="color: red;">Hello World!</h2> <!--Using Inline Style to Change the Color of Text-->
+        <h3>Hello World!</h3>
+        <h4>Hello World!</h4>
+        <h5>Hello World!</h5>
+        <h6>Hello World!</h6>
+
+        <main>
+        <p class="red-text">Click here to view more<a href="#" target="_blank"> cat Photos</a></p>
+
+        <img class="smaller-image dotted-green-border" src="https://fcc.im/fcc-relaxing-cat" alt="A cute orange cat lying on its back."> <!--Should show a image of a cat. SRC is a attribute--> <!--To put another class in the same tag, you just need to concatenate at the side of the other class already used.-->
+        
+
+        <h3>Cat Lists</h3>
+        
+        <div class="silver-backgorund">
+            <p>Things cats <strong>love</strong>:</p>
+
+            <ul>
+                <li>cat nips</li>
+                <li>laser pointers</li>
+                <li> lasagna</li>
+            </ul>
+
+            <img src="lasagna.jpg" alt="Lasagna">
+            
+            <p>Things cats <strong>hate</strong>:</p>
+            <ol>
+                <li>Fleas treatment</li>
+                <li>thunder</li>
+                <li>other cats</li>
+            </ol>
+        </div>
+
+        <img src="cats.jpg" alt="Cats">
+
+
+        <!--Estudar estas tags!-->
+        <form id="car-photo-form" action="/submit-cat-photo"> <!--Set the id of an Element-->
+            <label for="indoor"><input id="indoor" type="radio" name="indoor_outdoor" checked> Indoor</label><br>
+            <label for="outdoor"><input id="outdoor" type="radio" name="indoor_outdoor" checked> Outdoor</label><br>
+            
+            <label for="loving"><input id="loving" type="checkbox" name="personality">Loving </label><br>
+            <label><input id="lazy" type="checkbox" name="personality">Lazy</label><br>
+            <label><input id="energetic" type="checkbox" name="personality">Energetic</label><br>
+
+            <input type="text" placeholder="cat photo URL" required><br>
+            <button type="submit">Submit</button>
+        </form>
+        </main>
+
+        <footer>
+            <p><small>No CopyRight - <a href="https://freecodecamp.org" target="_blank">freeCodeCamp.org</a></small></p>
+        </footer>
+    </body>
+</html>
